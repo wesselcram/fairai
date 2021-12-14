@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/css/vragenlijst.css">
+</head>
+
+
+<body>
+
+<div>
+<p>Woordenlijst</p>
+<div>
+<div>Criminal charge degree = ernst van strafbare feit</div>
+<div>Misdemeanor = overtreding</div>
+<div>Felony = misdrijf</div>
+<div>Caucasian = wit</div>
+<div>Hispanic = Latijns-Amerikaans</div> 
+<div>Priors count = aantal gepleegde strafbare feiten in het verleden</div>
+<div>Recidivism = Herhaling van strafbaar gedrag</div>
+</div>
+<br><a href="toelichting">terug naar toelichting</a>
+</div>
+
+<div>
+<p>Instance</p>
+<div>
+<form>
+{{formIn}}
+</form>
+</div>
+</div>
+
+<div>
+<p>Counterfactuals</p>
+
+<form action="{% url 'vragenlijst' %}" method="post">
+	{{ formsetCf.management_form }}
+    {% csrf_token %}
+	 {% for form in formsetCf %}
+	 <div class="counterfactuals">
+		{{ form }}
+	</div>
+	 {% endfor %}
+    <input type="submit" value="Submit">
+</form>
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+
+<div class='toelichtingcontainer'>
+
+<div>
+Bedankt dat je meedoet met het onderzoek naar eerlijke en uitlegbare algoritmen! Met behulp van jouw
+feedback willen we het algoritme leren om eerlijkere voorspellingen te maken.
+Voor deze vragenlijst wordt een dataset gebruikt om recidive - herhaling van strafbaar gedrag - te
+voorspellen met de volgende variabelen:
+</div>
+
+<div class='woordentabel'>
+	<div>Criminal charge degree</div>
+	<div>De ernst van het gepleegde strafbare feit. De twee mogelijke waarden zijn
+	Misdemeanor (= overtreding). Hieronder vallen o.a. onder door rood rijden maar ook
+	winkel beroven
+	Felony (= misdrijf). Hieronder vallen o.a. verkrachting en moord</div>
+	<div>Race</div>
+	<div>De afkomst van de persoon. ‘Caucasian’ is een ander woord voor ‘white’ en Hispanic betekent ‘Latijns-Amerikaans’</div>
+	<div>Sex</div>
+	<div>Geslacht</div>
+	<div>Age</div>
+	<div>Leeftijd</div>
+	<div>Priors count</div>
+	<div>Aantal gepleegde strafbare feiten in het verleden</div>
+	<div>Recidivism</div>
+	<div>De variabele die het algoritme voorspelt. Deze persoon zal wel/niet opnieuw een strafbaar feit plegen volgens het algoritme.</div>
+</div>
+
+<div class='kopje'>Datapunt</div>
+<div>Een voorbeeld van een datapunt:</div>
+<div>
+<tr><th><label for="id_c_charge_degree">C charge degree:</label></th><td><input type="text" name="c_charge_degree" value="Felony" readonly="readonly" maxlength="20" required id="id_c_charge_degree"></td></tr>
+<tr><th><label for="id_race">Race:</label></th><td><input type="text" name="race" value="African American" readonly="readonly" maxlength="20" required id="id_race"></td></tr>
+<tr><th><label for="id_sex">Sex:</label></th><td><input type="text" name="sex" value="Male" readonly="readonly" maxlength="20" required id="id_sex"></td></tr>
+<tr><th><label for="id_age">Age:</label></th><td><input type="text" name="age" value="35" readonly="readonly" required id="id_age"></td></tr>
+<tr><th><label for="id_priors_count">Priors count:</label></th><td><input type="text" name="priors_count" value="7" readonly="readonly" required id="id_priors_count"></td></tr>
+<tr><th><label for="id_recidivism">Recidivism:</label></th><td><input type="text" name="recidivism" value="True" readonly="readonly" id="id_recidivism"></td></tr>
+</div>
+<div>Deze persoon zal volgens het algoritme opnieuw een strafbaar feit plegen.</div>
+
+<div class='kopje'>Counterfactuals</div>
+<div>
+Hieronder worden een aantal varianten — counterfactuals — van het datapunt hierboven laten zien. Deze
+lijken op het datapunt hierboven behalve dat ze een andere waarde hebben voor ‘recidivism’. Als het
+algoritme dacht dat de persoon hierboven weer opnieuw een strafbaar feit zal plegen, zal hij dat niet denken
+voor onderstaande voorbeelden, en andersom.
+</div>
+	<div>
+	<div class="counterfactuals">
+		<tr><th><label for="id_form-0-c_charge_degree">C charge degree:</label></th><td><input type="text" name="form-0-c_charge_degree" value="Felony" readonly="readonly" maxlength="20" id="id_form-0-c_charge_degree"></td></tr>
+		<tr><th><label for="id_form-0-race">Race:</label></th><td><input type="text" name="form-0-race" value="African-American" readonly="readonly" maxlength="20" id="id_form-0-race"></td></tr>
+		<tr><th><label for="id_form-0-sex">Sex:</label></th><td><input type="text" name="form-0-sex" value="Female" readonly="readonly" maxlength="20" id="id_form-0-sex"></td></tr>
+		<tr><th><label for="id_form-0-age">Age:</label></th><td><input type="text" name="form-0-age" value="34" readonly="readonly" id="id_form-0-age"></td></tr>
+		<tr><th><label for="id_form-0-priors_count">Priors count:</label></th><td><input type="text" name="form-0-priors_count" value="5" readonly="readonly" id="id_form-0-priors_count"></td></tr>
+		<tr><th><label for="id_form-0-recidivism">Recidivism:</label></th><td><input type="text" name="form-0-recidivism" value="False" readonly="readonly" id="id_form-0-recidivism"></td></tr>
+		<tr><th><label for="id_form-0-fair_0">Fair:</label></th><td>
+		<ul id="id_form-0-fair">
+			<li><label for="id_form-0-fair_0"><input type="radio" name="form-0-fair" value="True" required="true" id="id_form-0-fair_0">Yes</label></li>
+			<li><label for="id_form-0-fair_1"><input type="radio" name="form-0-fair" value="False" required="true" id="id_form-0-fair_1">No</label></li>
+		</ul>
+	</div>
+
+	<div class="counterfactuals">
+		<tr><th><label for="id_form-0-c_charge_degree">C charge degree:</label></th><td><input type="text" name="form-0-c_charge_degree" value="Misdemeanor" readonly="readonly" maxlength="20" id="id_form-0-c_charge_degree"></td></tr>
+		<tr><th><label for="id_form-0-race">Race:</label></th><td><input type="text" name="form-0-race" value="African-American" readonly="readonly" maxlength="20" id="id_form-0-race"></td></tr>
+		<tr><th><label for="id_form-0-sex">Sex:</label></th><td><input type="text" name="form-0-sex" value="Male" readonly="readonly" maxlength="20" id="id_form-0-sex"></td></tr>
+		<tr><th><label for="id_form-0-age">Age:</label></th><td><input type="text" name="form-0-age" value="35" readonly="readonly" id="id_form-0-age"></td></tr>
+		<tr><th><label for="id_form-0-priors_count">Priors count:</label></th><td><input type="text" name="form-0-priors_count" value="7" readonly="readonly" id="id_form-0-priors_count"></td></tr>
+		<tr><th><label for="id_form-0-recidivism">Recidivism:</label></th><td><input type="text" name="form-0-recidivism" value="False" readonly="readonly" id="id_form-0-recidivism"></td></tr>
+		<tr><th><label for="id_form-0-fair_0">Fair:</label></th><td>
+		<ul id="id_form-0-fair">
+			<li><label for="id_form-0-fair_0"><input type="radio" name="form-0-fair" value="True" required="true" id="id_form-0-fair_0">Yes</label></li>
+			<li><label for="id_form-0-fair_1"><input type="radio" name="form-0-fair" value="False" required="true" id="id_form-0-fair_1">No</label></li>
+		</ul>
+	</div>
+
+	<div class="counterfactuals">
+		<tr><th><label for="id_form-0-c_charge_degree">C charge degree:</label></th><td><input type="text" name="form-0-c_charge_degree" value="Felony" readonly="readonly" maxlength="20" id="id_form-0-c_charge_degree"></td></tr>
+		<tr><th><label for="id_form-0-race">Race:</label></th><td><input type="text" name="form-0-race" value="Caucasian" readonly="readonly" maxlength="20" id="id_form-0-race"></td></tr>
+		<tr><th><label for="id_form-0-sex">Sex:</label></th><td><input type="text" name="form-0-sex" value="Male" readonly="readonly" maxlength="20" id="id_form-0-sex"></td></tr>
+		<tr><th><label for="id_form-0-age">Age:</label></th><td><input type="text" name="form-0-age" value="40" readonly="readonly" id="id_form-0-age"></td></tr>
+		<tr><th><label for="id_form-0-priors_count">Priors count:</label></th><td><input type="text" name="form-0-priors_count" value="5" readonly="readonly" id="id_form-0-priors_count"></td></tr>
+		<tr><th><label for="id_form-0-recidivism">Recidivism:</label></th><td><input type="text" name="form-0-recidivism" value="False" readonly="readonly" id="id_form-0-recidivism"></td></tr>
+		<tr><th><label for="id_form-0-fair_0">Fair:</label></th><td>
+		<ul id="id_form-0-fair">
+			<li><label for="id_form-0-fair_0"><input type="radio" name="form-0-fair" value="True" required="true" id="id_form-0-fair_0">Yes</label></li>
+			<li><label for="id_form-0-fair_1"><input type="radio" name="form-0-fair" value="False" required="true" id="id_form-0-fair_1">No</label></li>
+		</ul>
+	</div>
+
+	<div class="counterfactuals">
+		<tr><th><label for="id_form-0-c_charge_degree">C charge degree:</label></th><td><input type="text" name="form-0-c_charge_degree" value="Felony" readonly="readonly" maxlength="20" id="id_form-0-c_charge_degree"></td></tr>
+		<tr><th><label for="id_form-0-race">Race:</label></th><td><input type="text" name="form-0-race" value="African-American" readonly="readonly" maxlength="20" id="id_form-0-race"></td></tr>
+		<tr><th><label for="id_form-0-sex">Sex:</label></th><td><input type="text" name="form-0-sex" value="Male" readonly="readonly" maxlength="20" id="id_form-0-sex"></td></tr>
+		<tr><th><label for="id_form-0-age">Age:</label></th><td><input type="text" name="form-0-age" value="57" readonly="readonly" id="id_form-0-age"></td></tr>
+		<tr><th><label for="id_form-0-priors_count">Priors count:</label></th><td><input type="text" name="form-0-priors_count" value="7" readonly="readonly" id="id_form-0-priors_count"></td></tr>
+		<tr><th><label for="id_form-0-recidivism">Recidivism:</label></th><td><input type="text" name="form-0-recidivism" value="False" readonly="readonly" id="id_form-0-recidivism"></td></tr>
+		<tr><th><label for="id_form-0-fair_0">Fair:</label></th><td>
+		<ul id="id_form-0-fair">
+			<li><label for="id_form-0-fair_0"><input type="radio" name="form-0-fair" value="True" required="true" id="id_form-0-fair_0">Yes</label></li>
+			<li><label for="id_form-0-fair_1"><input type="radio" name="form-0-fair" value="False" required="true" id="id_form-0-fair_1">No</label></li>
+		</ul>
+	</div>
+
+	<div class="counterfactuals">
+		<tr><th><label for="id_form-0-c_charge_degree">C charge degree:</label></th><td><input type="text" name="form-0-c_charge_degree" value="Felony" readonly="readonly" maxlength="20" id="id_form-0-c_charge_degree"></td></tr>
+		<tr><th><label for="id_form-0-race">Race:</label></th><td><input type="text" name="form-0-race" value="African-American" readonly="readonly" maxlength="20" id="id_form-0-race"></td></tr>
+		<tr><th><label for="id_form-0-sex">Sex:</label></th><td><input type="text" name="form-0-sex" value="Male" readonly="readonly" maxlength="20" id="id_form-0-sex"></td></tr>
+		<tr><th><label for="id_form-0-age">Age:</label></th><td><input type="text" name="form-0-age" value="35" readonly="readonly" id="id_form-0-age"></td></tr>
+		<tr><th><label for="id_form-0-priors_count">Priors count:</label></th><td><input type="text" name="form-0-priors_count" value="6" readonly="readonly" id="id_form-0-priors_count"></td></tr>
+		<tr><th><label for="id_form-0-recidivism">Recidivism:</label></th><td><input type="text" name="form-0-recidivism" value="False" readonly="readonly" id="id_form-0-recidivism"></td></tr>
+		<tr><th><label for="id_form-0-fair_0">Fair:</label></th><td>
+		<ul id="id_form-0-fair">
+			<li><label for="id_form-0-fair_0"><input type="radio" name="form-0-fair" value="True" required="true" id="id_form-0-fair_0">Yes</label></li>
+			<li><label for="id_form-0-fair_1"><input type="radio" name="form-0-fair" value="False" required="true" id="id_form-0-fair_1">No</label></li>
+		</ul>
+	</div>
+	</div>
+
+<div>
+Nu is aan jou de vraag of het voor ieder van de vijf varianten wenselijk (in het engels ‘fair’) is dat het
+algoritme een andere voorspelling doet dan het oorspronkelijke datapunt.
+</div>
+<div>
+Ik help je even op weg voor de denkrichting:
+</div>
+<div>
+In de eerste rij van tabel 3 zie je dat als de veroordeelde een vrouw was geweest (en 1 jaar jonger en 2
+misdrijven minder had gepleegd in het verleden), het algoritme had ingeschat dat diegene niet opnieuw een
+misdrijf zou plegen in plaats van wel. Is het wat jou betreft wenselijk dat het algoritme deze twee ‘personen’
+anders beoordeelt?
+</div>
+<div>
+In de tweede rij zie je dat als de veroordeelde een overtreding (minder erg) had begaan in plaats van een
+misdrijf gepleegd, het algoritme inschat dat de diegene niet opnieuw een misdrijf zou plegen in plaats van
+wel. Is het wat jou betreft wenselijk dat het algoritme deze twee ‘personen’ anders beoordeelt?
+</div>
+<div>
+Laatste dan:
+</div>
+<div>
+In de derde rij zie je dat als de veroordeelde wit was geweest in plaats van een Afrikaans-Amerikaanse
+afkomst (en 5 jaar ouder en 2 misdrijven minder had gepleegd in het verleden), het algoritme inschat dat
+diegene niet opnieuw een misdrijf zou plegen in plaats van wel. Is het wat jou betreft wenselijk dat het
+algoritme deze twee wenselijk anders beoordeelt?
+</div>
+<div>
+Als je op ‘Start vragenlijst’ drukt begint de vragenlijst. Je ziet dan een combinatie van 1 datapunt met 5
+counterfactuals die beoordeeld moeten worden. Dien je je antwoord in, dan krijg je een volgende
+combinatie. Je kan er zoveel doen als je tijd en zin hebt. Je kan terug naar de uitlegpagina door naar
+www.fairai.nl te gaan.
+</div>
+<div>
+<a  class='kopje' href="vragenlijst">Start vragenlijst</a>
+<div>
+</div>
+
+
+
+
+
+
+<body>
+</body>
+</html>
